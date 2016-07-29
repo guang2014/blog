@@ -1,10 +1,6 @@
-<<<<<<< HEAD
+
 var mongodb = require('./db'),
     markdown = require('markdown').markdown;
-=======
-var mongodb = require('./db');
-
->>>>>>> 90322ada2eea0ba4ed4afe3074f3520a37308fa4
 function Post(name, title, post) {
   this.name = name;
   this.title = title;
