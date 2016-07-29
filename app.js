@@ -24,6 +24,14 @@ app.use(session({
     url: 'mongodb://localhost/blog'
   })
 }));
+var multer  = require('multer');
+
+app.use(multer({
+  dest: './public/images',
+  rename: function (fieldname, filename) {
+    return filename;
+  }
+}));
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
